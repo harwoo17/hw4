@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "4.0.2"
 
 gem "rails", "~> 8.1.2"
-gem "sqlite3"
+gem "pg"
 gem "image_processing", "~> 1.2"
 gem "puma", ">= 5.0"
 gem "bcrypt", "~> 3.1.7"
@@ -14,6 +14,7 @@ gem "cgi"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "sqlite3"
 end
 
 group :development do
