@@ -17,9 +17,18 @@ class PlacesController < ApplicationController
   end
 
   def new
+    if session["user_id"] == nil
+      redirect_to "/login"
+      return
+    end
   end
 
   def create
+    if session["user_id"] == nil
+      redirect_to "/login"
+      return
+    end
+
     @place = Place.new
     @place["name"] = params["name"]
     @place.save
