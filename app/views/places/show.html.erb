@@ -7,9 +7,15 @@
     <div class="col-md-4 mb-4">
       <div class="card h-100">
         <div class="card-body">
+
+          <% if entry.image.attached? %>
+            <%= image_tag entry.image, class: "img-fluid mb-3" %>
+          <% end %>
+
           <h5 class="card-title"><%= entry["title"] %></h5>
           <h6 class="card-subtitle mb-2 text-muted"><%= entry["occurred_on"] %></h6>
           <p class="card-text"><%= entry["description"] %></p>
+
         </div>
       </div>
     </div>
