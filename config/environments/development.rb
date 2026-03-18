@@ -6,4 +6,5 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.server_timing = true
   config.active_storage.service = :local
+  config.hosts.clear
 end
